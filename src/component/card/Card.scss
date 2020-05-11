@@ -1,0 +1,176 @@
+
+$col-white: #fff;
+$col-black: #000;
+$col-bg: hsl(180, 52%, 96%);
+$col-green: hsl(180, 29%, 50%);
+$col-tag: hsl(180, 31%, 95%);
+
+$fs-normal: 15px;
+$fs-middle: 13px;
+
+$f-weight-normal: 500;
+$f-weight-bold: 700;
+
+.card {
+  margin-bottom: 22px;
+  background-color: $col-white;
+  border-left: 6px solid $col-green;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 5px 10px 40px -20px rgba(91, 164, 164, 1);
+  -moz-box-shadow: 5px 10px 40px -20px rgba(91, 164, 164, 1);
+  box-shadow: 5px 10px 40px -20px rgba(91, 164, 164, 1);
+
+  &__box {
+    padding: 32px 34px 32px 22px;
+    display: flex;
+    justify-content: space-between;
+
+    .left-column {
+      display: flex;
+      margin: 0 10px;
+    }
+
+    &__img {
+      width: 94px;
+      height: 90px;
+      margin-right: 21px;
+      min-width: 94px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__info {
+      min-width: 300px;
+
+      .title {
+        font-size: 14px;
+        font-weight: 700;
+        color: $col-green;
+        margin-right: 7px;
+        line-height: 25px;
+      }
+
+      .badge {
+        margin-left: 9px;
+        padding: 7px 8px 6px 8px;
+        color: $col-white;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+
+        &.green {
+          background-color: $col-green;
+        }
+
+        &.black {
+          background-color: $col-black;
+        }
+      }
+
+      .role {
+        cursor: pointer;
+        margin-top: 11px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .skills {
+        margin-top: 12px;
+
+        .point {
+          padding: 0 14px;
+        }
+      }
+    }
+
+    &__tags {
+      margin-top: 8px;
+      align-self: center;
+
+      .tag {
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 8px 7px 9px;
+        padding: 11px 7px 11px 8px;
+        background-color: $col-tag;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color: $col-green;
+        font-weight: 700;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    margin-bottom: 38px;
+  
+    &__box {
+      padding: 0 24px 24px 18px;
+      flex-direction: column;
+  
+      .left-column {
+        flex-direction: column;
+        margin: 0;
+      }
+  
+      &__img {
+        margin-top: -25px;
+        width: 48px;
+        height: 48px;
+        margin-right: 0;
+        min-width: 48px;
+        background-size: contain;
+      }
+  
+      &__info {
+        margin-top: 10px;
+        min-width: inherit;
+
+        .title {
+          font-size: 13px;
+        }
+  
+        .badge {
+          margin-left: 9px;
+        }
+  
+        .role {
+          margin-top: 11px;
+          font-size: 15px;
+        }
+  
+        .skills {
+          margin-top: 16px;
+          font-size: 13px;
+  
+          .point {
+            padding: 0 6px;
+          }
+        }
+      }
+  
+      &__tags {
+        width: 100%;
+        margin-top: 18px;
+        border-top: 1px solid $col-green;
+  
+        .tag {
+          margin: 15px 16px -3px 0px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+
+$col-white: #fff;
+$col-black: #000;
+$col-bg: hsl(180, 52%, 96%);
+$col-green: hsl(180, 29%, 50%);
+$col-tag: hsl(180, 31%, 95%);
+
+$fs-normal: 15px;
+$fs-middle: 13px;
+
+$f-weight-normal: 500;
+$f-weight-bold: 700;
+
+.card-filter {
+  margin-top: -36px;
+  background-color: $col-white;
+  border-radius: 7px;
+  -webkit-box-shadow: 5px 10px 40px -20px rgba(91, 164, 164, 1);
+  -moz-box-shadow: 5px 10px 40px -20px rgba(91, 164, 164, 1);
+  box-shadow: 5px 10px 40px -20px rgba(91, 164, 164, 1);
+  margin-bottom: 3px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px 13px 33px;
+
+    .clear {
+      align-self: center;
+      cursor: pointer;
+      animation: all .2s ease-in-out;
+      font-size: $fs-middle;
+      font-weight: $f-weight-bold;
+
+      &:hover {
+        color: $col-green;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__tags {
+    margin-top: 3px;
+    .tag {
+      display: inline-block;
+      margin: 0 8px 7px 9px;
+      padding: 9px 0 7px 0px;
+      background-color: #eef6f6;
+      border-radius: 3px;
+      color: #5ba4a4;
+      font-weight: 700;
+      font-size: 13px;
+      
+
+      .title {
+        padding: 10px 9px 9px 8px;
+        background-color: $col-tag;
+        -webkit-border-top-left-radius: 3px;
+        border-top-left-radius: 3px;
+        -webkit-border-bottom-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        color: $col-green;
+      }
+
+      .closed {
+        cursor: pointer;
+        margin-left: -1px;
+        -webkit-border-top-right-radius: 3px;
+        border-top-right-radius: 3px;
+        -webkit-border-bottom-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background: url('../../images/icon-remove.svg') no-repeat center $col-black;
+        color: $col-white;
+        font-weight: $f-weight-bold;
+        padding: 10px 16px 9px 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-filter {
+    
+    &__box {
+      padding: 18px 26px 13px 10px;
+  
+      .clear {
+        margin-top: -10px;
+        align-self: center;
+        cursor: pointer;
+        animation: all .2s ease-in-out;
+        font-size: $fs-middle;
+        font-weight: $f-weight-bold;
+  
+        &:hover {
+          color: $col-green;
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    &__tags {
+      margin-top: 3px;
+      .tag {
+        display: inline-block;
+        margin: 0 8px 7px 9px;
+        padding: 9px 0 7px 0px;
+        background-color: #eef6f6;
+        border-radius: 3px;
+        color: #5ba4a4;
+        font-weight: 700;
+        font-size: 13px;
+        transition: all .5s ease-in-out;
+  
+        .title {
+          padding: 10px 9px 9px 8px;
+          background-color: $col-tag;
+          -webkit-border-top-left-radius: 3px;
+          border-top-left-radius: 3px;
+          -webkit-border-bottom-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+          color: $col-green;
+        }
+  
+        .closed {
+          cursor: pointer;
+          margin-left: -1px;
+          -webkit-border-top-right-radius: 3px;
+          border-top-right-radius: 3px;
+          -webkit-border-bottom-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+          background: url('../../images/icon-remove.svg') no-repeat center $col-black;
+          color: $col-white;
+          font-weight: $f-weight-bold;
+          padding: 10px 16px 9px 16px;
+        }
+      }
+    }
+  }
+}
